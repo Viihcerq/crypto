@@ -1,10 +1,10 @@
-# 📱 Crypto App
+# Crypto App
 
 Este projeto é um aplicativo Android simples para **consultar informações de criptomoedas** em tempo real, consumindo uma API externa.
 
 ---
 
-## 🛠️ Estrutura do Código
+## Estrutura do Código
 
 O projeto é dividido principalmente em três pacotes: `service`, `model` e a `MainActivity`.
 
@@ -40,7 +40,7 @@ O pacote `model` contém as **classes de dados** (também chamadas de "models" o
 
 ---
 
-## 🚀 Tecnologias Usadas
+## Tecnologias Usadas
 
 - **Kotlin** para a lógica do app.
 - **Android Studio** como ambiente de desenvolvimento.
@@ -50,7 +50,7 @@ O pacote `model` contém as **classes de dados** (também chamadas de "models" o
 
 ---
 
-## 📦 Como rodar o projeto
+## Como rodar o projeto
 
 1. Clone o repositório:
    ```bash
