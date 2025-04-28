@@ -50,6 +50,12 @@ O pacote `model` contém as **classes de dados** (também chamadas de "models" o
 
 ---
 
+## Evidência do projeto executando
+
+![Evidência do projeto executando](image/print.png)
+
+---
+
 ## Como rodar o projeto
 
 1. Clone o repositório:
@@ -66,3 +72,6 @@ O pacote `model` contém as **classes de dados** (também chamadas de "models" o
 5. Rode o aplicativo (`Run > Run 'app'`).
 
 ---
+
+
+
