@@ -1,6 +1,6 @@
 # Crypto App
 
-Este projeto é um aplicativo Android simples para **consultar informações de criptomoedas** em tempo real, consumindo uma API externa.
+Este projeto é um aplicativo Android simples para **consultar informações de criptomoedas** em tempo real, consumindo a API pública do Mercado Bitcoin.
 
 ---
 
@@ -12,25 +12,33 @@ O projeto é dividido principalmente em três pacotes: `service`, `model` e a `M
 
 O pacote `service` é responsável por **definir a comunicação com a API de criptomoedas**.
 
-- **CryptoService.java**
+- **MercadoBitcoinService.kt**
+    - Essa é uma interface para o Retrofit. Ela define como o app Android vai se comunicar com a API do Mercado Bitcoin para buscar informações sobre o preço do Bitcoin.
     - Define a interface para a comunicação com o backend usando Retrofit.
     - Contém a requisição `@GET("public/cryptocurrencies/list")` para buscar a lista de moedas.
 
-- **RetrofitService.java**
+
+- **MercadoBitcoinServiceFactory.kt**
     - Responsável por configurar o **Retrofit** (biblioteca para consumir APIs REST).
+    - Adiciona um conversor Gson para transformar automaticamente as respostas JSON em objetos Kotlin.
+    - Cria e entrega uma instância pronta de MercadoBitcoinService, permitindo realizar chamadas de API de maneira fácil.
     - Define a URL base e gera a instância que será usada para fazer as requisições HTTP.
 
 ### 📂 model
 
 O pacote `model` contém as **classes de dados** (também chamadas de "models" ou "DTOs") que representam as informações da API.
 
-- **CryptoModel.java**
-    - Representa os dados de uma criptomoeda (ex: nome, símbolo, preço).
-    - Possui atributos que correspondem aos campos retornados pela API.
+- **TickerResponse.kt**
+    - A classe representa o objeto completo que a API retorna.
+    - Guarda o objeto Ticker que vem da resposta da API.
 
+- **Ticker.kt**
+    - Classe de dados (modelo principal)
+    - Representa os dados reais sobre o Bitcoin que você quer usar no app.
+  
 ### 📂 main (MainActivity.java)
 
-- **MainActivity.java**
+- **MainActivity.kt**
     - É a **tela principal** do aplicativo.
     - Responsável por:
         - Inicializar a interface (carregar layout, toolbar).
@@ -54,6 +62,9 @@ O pacote `model` contém as **classes de dados** (também chamadas de "models" o
 
 ![Evidência do projeto executando](image/print.png)
 
+![Evidência do projeto executando](image/print1.png)
+
+
 ---
 
 ## Como rodar o projeto
@@ -70,8 +81,6 @@ O pacote `model` contém as **classes de dados** (também chamadas de "models" o
 4. Configure um emulador Android ou conecte um dispositivo físico.
 
 5. Rode o aplicativo (`Run > Run 'app'`).
-
----
 
 
 
