@@ -72,6 +72,12 @@ Contém todas as funções *Composable* (`CryptoApp`, `CryptoScreen`, `QuoteInfo
 
 ![Evidência do projeto executando](image/print2.png)
 ---
+## Integrantes do grupo
+
+- Vitoria Cerqueira, rm: 552509
+- Lucas Henrique, rm: 550175
+- Leonardo Queiroz, rm: 552500
+---
 
 
 
