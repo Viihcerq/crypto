@@ -1,10 +1,10 @@
 package viihcerq.com.github.crypto.model
 
-class TickerResponse(
+data class TickerResponse(
     val ticker: Ticker
 )
 
-class Ticker(
+data class Ticker(
     val high: String,
     val low: String,
     val vol: String,
